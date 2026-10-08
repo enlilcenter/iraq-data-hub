@@ -1,0 +1,1818 @@
+{
+  "name": "enlil-iraq-data-hub",
+  "title": "Enlil Center Iraq Data Hub: climate, water, energy, economy and governance indicators for Iraq",
+  "description": "Open mirror of the Enlil Center Iraq Data Hub (https://enlilcenter.org/data): curated time series on Iraq's climate, water, energy, economy and governance, each with its original source, unit, retrieval date and scope notes.",
+  "homepage": "https://enlilcenter.org/data",
+  "version": "2026.10.08",
+  "created": "2026-10-08",
+  "keywords": [
+    "Iraq",
+    "climate",
+    "water",
+    "energy",
+    "economy",
+    "governance",
+    "open data",
+    "Middle East"
+  ],
+  "contributors": [
+    {
+      "title": "Enlil Center for Environment and Sustainable Development",
+      "path": "https://enlilcenter.org",
+      "role": "publisher"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Compilation, metadata and documentation; each series also carries its source licence"
+    }
+  ],
+  "resources": [
+    {
+      "name": "iraq-climate-induced-displacement-iom",
+      "path": "data/iraq-climate-induced-displacement-iom.csv",
+      "title": "Climate-Induced Internal Displacement (IOM DTM Rounds)",
+      "description": "Individuals recorded by IOM's Displacement Tracking Matrix as displaced within Iraq by drought, water scarcity, salinity and land degradation, across central and southern governorates, by assessment round.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-climate-induced-displacement-iom",
+      "unit": "individuals",
+      "frequency": "Irregular (DTM rounds)",
+      "keywords": [
+        "Iraq",
+        "Climate",
+        "Governance"
+      ],
+      "sources": [
+        {
+          "title": "Iraq — Climate-Induced Displacement, Central and Southern Iraq (September 2025)",
+          "publisher": "IOM Displacement Tracking Matrix",
+          "path": "https://dtm.iom.int/reports/iraq-climate-induced-displacement-central-and-southern-iraq-september-2025"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "IOM DTM terms (reuse with attribution)",
+          "path": "https://dtm.iom.int/terms-and-conditions"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "Point-in-time stock figures, not flows. The June 2025 figure was reported as 'more than 168,000' in IOM's Climate Vulnerability Assessment. Rounds are not evenly spaced.",
+      "schema": {
+        "fields": [
+          {
+            "name": "DTM round",
+            "type": "string"
+          },
+          {
+            "name": "Individuals displaced",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-ghg-emissions-by-category-2021",
+      "path": "data/iraq-ghg-emissions-by-category-2021.csv",
+      "title": "Greenhouse-Gas Emissions by Source Category, 2021 (1st BTR)",
+      "description": "Iraq's national greenhouse-gas inventory for 2021 by IPCC source category, from the country's first Biennial Transparency Report. Total 205,328 kt CO₂-equivalent including land use.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-ghg-emissions-by-category-2021",
+      "unit": "kt CO₂-equivalent",
+      "frequency": "One-off (2021 inventory)",
+      "keywords": [
+        "Iraq",
+        "Climate",
+        "Energy"
+      ],
+      "sources": [
+        {
+          "title": "1st Biennial Transparency Report of Iraq (2021 inventory), as reproduced in Pathways for Climate Investment in Iraq (2025)",
+          "publisher": "Ministry of Environment, Republic of Iraq",
+          "path": "https://files.enlilcenter.org/research/pathways-for-climate-investment-in-iraq-1775146293856.pdf"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Compiled by Enlil Center from public sources; CC-BY-4.0 for the compilation",
+          "path": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "Key-category analysis table from the 1st BTR (issued June 2025). Categories sum to 205,328 kt CO2e with LULUCF.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Source category",
+            "type": "string"
+          },
+          {
+            "name": "Emissions (kt CO2e)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-average-precipitation",
+      "path": "data/iraq-average-precipitation.csv",
+      "title": "Iraq average precipitation",
+      "description": "Long-run average precipitation in depth over the country, in millimetres per year (FAO estimate as reported by WDI).",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-average-precipitation",
+      "unit": "mm per year",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Climate",
+        "Water"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/AG.LND.PRCP.MM?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code AG.LND.PRCP.MM. This is a long-term average, updated infrequently — it does not capture year-to-year drought. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Precipitation",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-co2-emissions-total",
+      "path": "data/iraq-co2-emissions-total.csv",
+      "title": "Iraq CO₂ emissions (total)",
+      "description": "Total carbon dioxide emissions excluding land use, land-use change and forestry, in million tonnes of CO₂-equivalent.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-co2-emissions-total",
+      "unit": "Mt CO₂e",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Climate",
+        "Energy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/EN.GHG.CO2.MT.CE.AR5?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code EN.GHG.CO2.MT.CE.AR5 (AR5 GWP, excluding LULUCF). World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "CO₂ emissions",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-co2-emissions-per-capita",
+      "path": "data/iraq-co2-emissions-per-capita.csv",
+      "title": "Iraq CO₂ emissions per capita",
+      "description": "Carbon dioxide emissions per person, excluding land use change — a measure of the carbon intensity of daily life and the power sector.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-co2-emissions-per-capita",
+      "unit": "t CO₂e per person",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Climate",
+        "Energy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/EN.GHG.CO2.PC.CE.AR5?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code EN.GHG.CO2.PC.CE.AR5. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "CO₂ per capita",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-electricity-generation-by-source",
+      "path": "data/iraq-electricity-generation-by-source.csv",
+      "title": "Iraq electricity generation by source",
+      "description": "Electricity generation by fuel and technology — gas, oil, hydropower and solar — in terawatt-hours.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-electricity-generation-by-source",
+      "unit": "TWh",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Climate",
+        "Energy"
+      ],
+      "sources": [
+        {
+          "title": "Yearly Electricity Data / Statistical Review of World Energy; data processed by Our World in Data",
+          "publisher": "Ember / Energy Institute",
+          "path": "https://ourworldindata.org/grapher/electricity-prod-source-stacked"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://ember-energy.org/data/"
+        }
+      ],
+      "retrieved": "2026-09-18",
+      "notes": "Generation by source, terawatt-hours. Zero-value technologies for Iraq (coal, nuclear, wind, bioenergy, other renewables) omitted for clarity. Source: Ember Yearly Electricity Data and Energy Institute Statistical Review of World Energy, processed by Our World in Data.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Gas",
+            "type": "number"
+          },
+          {
+            "name": "Oil",
+            "type": "number"
+          },
+          {
+            "name": "Hydropower",
+            "type": "number"
+          },
+          {
+            "name": "Solar",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-solar-pv-installed-capacity",
+      "path": "data/iraq-solar-pv-installed-capacity.csv",
+      "title": "Iraq installed solar PV capacity",
+      "description": "Cumulative installed solar photovoltaic capacity connected to Iraq's grid, in megawatts.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-solar-pv-installed-capacity",
+      "unit": "MW",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Climate",
+        "Energy"
+      ],
+      "sources": [
+        {
+          "title": "Renewable Capacity Statistics; data processed by Our World in Data",
+          "publisher": "IRENA",
+          "path": "https://ourworldindata.org/grapher/installed-solar-pv-capacity"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "IRENA terms (reuse with attribution)",
+          "path": "https://www.irena.org/Publications/Terms-of-use"
+        }
+      ],
+      "retrieved": "2026-09-18",
+      "notes": "Converted from gigawatts to megawatts (×1,000). Original source: International Renewable Energy Agency (IRENA), Renewable Capacity Statistics; processed by Our World in Data.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Solar PV capacity",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-pm25-mean-annual-exposure",
+      "path": "data/iraq-pm25-mean-annual-exposure.csv",
+      "title": "PM2.5 Air Pollution, Mean Annual Exposure",
+      "description": "Population-weighted average annual exposure to fine particulate matter (PM2.5), the pollutant most associated with open waste burning, dust storms and flaring. The WHO 2021 guideline is 5 micrograms per cubic metre.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-pm25-mean-annual-exposure",
+      "unit": "micrograms per cubic metre",
+      "frequency": "Annual",
+      "keywords": [
+        "Iraq",
+        "Climate",
+        "Governance"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (EN.ATM.PM25.MC.M3)",
+          "publisher": "World Bank",
+          "path": "https://api.worldbank.org/v2/country/IRQ/indicator/EN.ATM.PM25.MC.M3"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "Modelled estimates (Global Burden of Disease / WDI). Iraq's exposure has stayed near ten times the WHO guideline for three decades.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Value",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-agriculture-value-added-gdp-share",
+      "path": "data/iraq-agriculture-value-added-gdp-share.csv",
+      "title": "Agriculture, Forestry and Fishing Value Added (% of GDP)",
+      "description": "Agriculture, forestry and fishing sector value added as a share of Iraq's GDP. Shows the sector is smaller and more volatile than commonly assumed — the 2020 spike reflects the collapse in oil GDP that year, not agricultural growth.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-agriculture-value-added-gdp-share",
+      "unit": "% of GDP",
+      "frequency": "Annual",
+      "keywords": [
+        "Iraq",
+        "Economy",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (NV.AGR.TOTL.ZS)",
+          "publisher": "World Bank",
+          "path": "https://api.worldbank.org/v2/country/IRQ/indicator/NV.AGR.TOTL.ZS"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "The 2020 spike is a denominator effect from the oil-price collapse, not sector growth.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Value",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-cip-sectoral-investment-needs-2030",
+      "path": "data/iraq-cip-sectoral-investment-needs-2030.csv",
+      "title": "Climate Investment Plan: Sectoral Investment Needs to 2030",
+      "description": "Investment required to 2030 and expected annual economic benefit by sector, as estimated in Iraq's Climate Investment Plan technical report (transitional phase 2025–2030). Total need: US$82.85 billion.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-cip-sectoral-investment-needs-2030",
+      "unit": "US$ billion",
+      "frequency": "One-off (2025 estimate)",
+      "keywords": [
+        "Iraq",
+        "Economy",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "Pathways for Climate Investment in Iraq — Technical Investment Report (2025), Table 1",
+          "publisher": "National Investment Commission / Ministry of Environment, with UNDP",
+          "path": "https://files.enlilcenter.org/research/pathways-for-climate-investment-in-iraq-1775146293856.pdf"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Compiled by Enlil Center from public sources; CC-BY-4.0 for the compilation",
+          "path": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "Authors' estimation from sector consultations, not audited project pipelines. Enlil Center was a contributing author to the report.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Sector",
+            "type": "string"
+          },
+          {
+            "name": "Investment required (US$ bn)",
+            "type": "number"
+          },
+          {
+            "name": "Expected annual benefit (US$ bn)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-fdi-net-inflows-gdp-share",
+      "path": "data/iraq-fdi-net-inflows-gdp-share.csv",
+      "title": "Iraq foreign direct investment, net inflows (% of GDP)",
+      "description": "Net inflows of foreign direct investment as a share of GDP. Negative values mean more investment left Iraq than entered it that year.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-fdi-net-inflows-gdp-share",
+      "unit": "% of GDP",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/BX.KLT.DINV.WD.GD.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "WDI code BX.KLT.DINV.WD.GD.ZS. World Bank data last updated 2026-07-13. Net FDI has been negative every year from 2013 to 2024 with no exception; the last positive year was 2012.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Net FDI inflows",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-gdp-current-usd",
+      "path": "data/iraq-gdp-current-usd.csv",
+      "title": "Iraq GDP (current US$)",
+      "description": "Iraq's gross domestic product at current market prices, converted to US dollars. The clearest single measure of the size of the Iraqi economy and its exposure to oil-price cycles.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-gdp-current-usd",
+      "unit": "USD billion",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "Converted from US$ to US$ billion by Enlil (÷1,000,000,000). WDI code NY.GDP.MKTP.CD. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "GDP",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-gdp-growth",
+      "path": "data/iraq-gdp-growth.csv",
+      "title": "Iraq GDP growth (annual %)",
+      "description": "Annual percentage growth rate of GDP at constant local-currency prices. Swings track oil output and prices as well as conflict shocks.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-gdp-growth",
+      "unit": "%",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code NY.GDP.MKTP.KD.ZG. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "GDP growth",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-gdp-per-capita",
+      "path": "data/iraq-gdp-per-capita.csv",
+      "title": "Iraq GDP per capita (current US$)",
+      "description": "GDP divided by midyear population, in current US dollars — a rough proxy for average income.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-gdp-per-capita",
+      "unit": "USD",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code NY.GDP.PCAP.CD. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "GDP per capita",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-inflation-cpi",
+      "path": "data/iraq-inflation-cpi.csv",
+      "title": "Iraq inflation, consumer prices (annual %)",
+      "description": "Annual change in the cost to the average consumer of a fixed basket of goods and services.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-inflation-cpi",
+      "unit": "%",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code FP.CPI.TOTL.ZG. Very high values in the 1990s reflect the sanctions-era price collapse of the dinar. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Inflation",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-non-oil-revenue-share-non-oil-gdp",
+      "path": "data/iraq-non-oil-revenue-share-non-oil-gdp.csv",
+      "title": "Iraq non-oil revenue (% of non-oil GDP)",
+      "description": "Government revenue excluding oil, measured against the size of the non-oil economy. A read on how much the non-oil economy funds the state that runs it, independent of oil income.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-non-oil-revenue-share-non-oil-gdp",
+      "unit": "% of non-oil GDP",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "IMF non-oil fiscal revenue (redistributed via FRED)",
+          "publisher": "IMF / Federal Reserve Bank of St. Louis (FRED)",
+          "path": "https://fred.stlouisfed.org/series/IRQGGRXOGDPXOPT"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "IMF terms (reuse with attribution)",
+          "path": "https://www.imf.org/en/About/copyright-and-terms"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "FRED series IRQGGRXOGDPXOPT, IMF-sourced, not a World Bank WDI series. 2025 figure is an IMF projection, not an outturn. Re-verified live 24 Sep 2026 (unchanged from a 22 Sep 2026 pull).",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Non-oil revenue",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-oil-rents-share-gdp",
+      "path": "data/iraq-oil-rents-share-gdp.csv",
+      "title": "Iraq oil rents (% of GDP)",
+      "description": "Oil rents — the difference between the value of crude production and its cost of production — as a share of GDP. A direct read on how oil-dependent the economy is.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-oil-rents-share-gdp",
+      "unit": "% of GDP",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Economy",
+        "Energy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/NY.GDP.PETR.RT.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code NY.GDP.PETR.RT.ZS. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Oil rents",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-population",
+      "path": "data/iraq-population.csv",
+      "title": "Iraq population",
+      "description": "Total midyear population, counting all residents regardless of legal status or citizenship.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-population",
+      "unit": "million people",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Economy",
+        "Governance"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "Converted from persons to millions by Enlil. WDI code SP.POP.TOTL. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Population",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-total-natural-resource-rents-gdp-share",
+      "path": "data/iraq-total-natural-resource-rents-gdp-share.csv",
+      "title": "Iraq total natural resource rents (% of GDP)",
+      "description": "The combined rents from oil, natural gas, coal, minerals and forests as a share of GDP — the broadest single measure of how much of Iraq's economy is extracted rent rather than produced value.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-total-natural-resource-rents-gdp-share",
+      "unit": "% of GDP",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/NY.GDP.TOTL.RT.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "WDI code NY.GDP.TOTL.RT.ZS. World Bank data last updated 2026-07-13. Companion series to iraq-oil-rents-share-gdp — this is the broader total-resource-rent figure (oil, gas, minerals, forest), oil alone accounts for nearly all of it in Iraq's case.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Total resource rents",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-unemployment-rate",
+      "path": "data/iraq-unemployment-rate.csv",
+      "title": "Iraq unemployment rate (% of labour force)",
+      "description": "Share of the labour force that is without work but available for and seeking employment (ILO modelled estimate).",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-unemployment-rate",
+      "unit": "%",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Economy",
+        "Governance"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code SL.UEM.TOTL.ZS (ILO modelled estimate). World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Unemployment",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-urban-population-share",
+      "path": "data/iraq-urban-population-share.csv",
+      "title": "Iraq urban population (% of total)",
+      "description": "Share of people living in urban areas as defined by national statistical offices.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-urban-population-share",
+      "unit": "%",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Economy",
+        "Water"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code SP.URB.TOTL.IN.ZS. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Urban share",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-electricity-transmission-distribution-losses",
+      "path": "data/iraq-electricity-transmission-distribution-losses.csv",
+      "title": "Electric Power Transmission and Distribution Losses (% of Output)",
+      "description": "Share of electricity generated that is lost in transmission and distribution before reaching consumers. Iraq's losses are among the highest recorded anywhere, a core reason installed capacity translates into far less delivered power.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-electricity-transmission-distribution-losses",
+      "unit": "% of output",
+      "frequency": "Annual",
+      "keywords": [
+        "Iraq",
+        "Energy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (EG.ELC.LOSS.ZS)",
+          "publisher": "World Bank",
+          "path": "https://api.worldbank.org/v2/country/IRQ/indicator/EG.ELC.LOSS.ZS"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "Includes technical losses and non-technical losses (theft, unmetered use). Values above 50% in recent years reflect Iraq's degraded grid and widespread unbilled consumption.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Value",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-gas-flaring-intensity",
+      "path": "data/iraq-gas-flaring-intensity.csv",
+      "title": "Gas Flaring Intensity",
+      "description": "Cubic metres of gas flared per barrel of oil produced — a measure of how much of Iraq's associated gas is wasted relative to output, independent of production volume.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-gas-flaring-intensity",
+      "unit": "cubic metres per barrel",
+      "frequency": "Annual",
+      "keywords": [
+        "Iraq",
+        "Energy",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "Global Gas Flaring Tracker, June 2026 edition — flare volume and intensity estimates by economy, 2012–2025",
+          "publisher": "World Bank / Global Gas Flaring Reduction Partnership",
+          "path": "https://thedocs.worldbank.org/en/doc/b34e0c054bb3fe3695e70154c28eef3f-0400072026/related/Flare-volume-and-intensity-estimates-2012-2025.xlsx"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "June 2026 edition. Intensity has fallen since 2012 even as absolute volumes stayed high, because oil output grew faster than gas capture.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Flaring intensity (m3/bbl)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-gas-flaring-volume",
+      "path": "data/iraq-gas-flaring-volume.csv",
+      "title": "Gas Flaring Volume",
+      "description": "Estimated volume of associated gas flared at Iraq's oil fields each year, from satellite (VIIRS) observations compiled by the World Bank's Global Gas Flaring Reduction Partnership. Iraq is consistently among the three largest flaring countries in the world.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-gas-flaring-volume",
+      "unit": "billion cubic metres",
+      "frequency": "Annual",
+      "keywords": [
+        "Iraq",
+        "Energy",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "Global Gas Flaring Tracker, June 2026 edition — flare volume and intensity estimates by economy, 2012–2025",
+          "publisher": "World Bank / Global Gas Flaring Reduction Partnership",
+          "path": "https://thedocs.worldbank.org/en/doc/b34e0c054bb3fe3695e70154c28eef3f-0400072026/related/Flare-volume-and-intensity-estimates-2012-2025.xlsx"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "June 2026 edition. This edition re-estimates the entire 2012–2024 series at substantially higher volumes than the July 2025 edition, whose data file put 2024 at 18.2 bcm (and 2020 at 17.4 bcm); Enlil articles published before June 2026 cite the earlier edition's figures.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Flared gas (bcm)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-access-to-electricity",
+      "path": "data/iraq-access-to-electricity.csv",
+      "title": "Iraq access to electricity (% of population)",
+      "description": "Percentage of the population with access to electricity, from household surveys and utility data. Access is near-universal on paper; hours of supply are the real constraint.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-access-to-electricity",
+      "unit": "%",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Energy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code EG.ELC.ACCS.ZS. Measures connection, not reliability or hours of supply. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Access to electricity",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-energy-use-per-capita",
+      "path": "data/iraq-energy-use-per-capita.csv",
+      "title": "Iraq energy use per capita",
+      "description": "Primary energy use per person before transformation to end-use fuels, in kilograms of oil equivalent.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-energy-use-per-capita",
+      "unit": "kg of oil equivalent",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Energy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/EG.USE.PCAP.KG.OE?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code EG.USE.PCAP.KG.OE. Series ends where WDI coverage ends. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Energy use per capita",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-renewable-electricity-output-share",
+      "path": "data/iraq-renewable-electricity-output-share.csv",
+      "title": "Iraq renewable electricity output (% of total electricity)",
+      "description": "Electricity generated from renewable sources (mainly hydropower) as a share of total electricity output.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-renewable-electricity-output-share",
+      "unit": "%",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Energy",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/EG.ELC.RNEW.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code EG.ELC.RNEW.ZS. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Renewable electricity",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-renewable-energy-consumption-share",
+      "path": "data/iraq-renewable-energy-consumption-share.csv",
+      "title": "Iraq renewable energy consumption (% of total final energy)",
+      "description": "Renewable energy as a share of total final energy consumption — Iraq remains one of the lowest in the region.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-renewable-energy-consumption-share",
+      "unit": "%",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Energy",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/EG.FEC.RNEW.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code EG.FEC.RNEW.ZS. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Renewable share",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-southern-seaborne-crude-exports-2026-monthly",
+      "path": "data/iraq-southern-seaborne-crude-exports-2026-monthly.csv",
+      "title": "Iraq southern (seaborne) crude oil exports, monthly (2026)",
+      "description": "Iraq's southern, seaborne crude oil export volumes by month during the 2026 Iran-Israel-US war and Strait of Hormuz crisis. This covers the Basrah export route most directly exposed to the Hormuz closure; Iraq's separate northern Kirkuk-Ceyhan pipeline route continued operating and is not included here, so it understates Iraq's total national export volume in months when that pipeline was active.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-southern-seaborne-crude-exports-2026-monthly",
+      "unit": "Thousand barrels per day",
+      "frequency": "Monthly",
+      "keywords": [
+        "Iraq",
+        "Energy",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "Iraq southern crude export volumes, 2026",
+          "publisher": "SOMO / Iraq Ministry of Oil, as reported by AGBI and Reuters",
+          "path": "https://www.agbi.com/oil-and-gas/2026/09/iraq-says-its-oil-exports-are-close-to-pre-conflict-levels/"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Compiled by Enlil Center from public sources; CC-BY-4.0 for the compilation",
+          "path": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "March and April figures were dropped from this series after independent re-verification found conflicting monthly totals across sources that could not be reconciled with confidence; only May-August figures corroborated by ministry-cited (SOMO) reporting are included. This is southern/seaborne (Basrah) volume specifically, not Iraq's total national export volume - the northern Kirkuk-Ceyhan pipeline route continued operating separately and added several hundred thousand bpd on top of this series in most months (combined national average was roughly 530,000 bpd across May-June, against 100,000-500,000 bpd shown here for the seaborne route alone). Pre-war baseline (Jan-Feb 2026) reflects total exports since the routes were not yet differentiated in reporting.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Month",
+            "type": "string"
+          },
+          {
+            "name": "Southern/seaborne exports (thousand bpd)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-total-electricity-generation",
+      "path": "data/iraq-total-electricity-generation.csv",
+      "title": "Iraq total electricity generation",
+      "description": "Total electricity generated in Iraq from all sources, in terawatt-hours.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-total-electricity-generation",
+      "unit": "TWh",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Energy"
+      ],
+      "sources": [
+        {
+          "title": "Yearly Electricity Data / Statistical Review of World Energy; data processed by Our World in Data",
+          "publisher": "Ember / Energy Institute",
+          "path": "https://ourworldindata.org/grapher/electricity-generation"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://ember-energy.org/data/"
+        }
+      ],
+      "retrieved": "2026-09-18",
+      "notes": "Total electricity generation, terawatt-hours, all sources. Source: Ember Yearly Electricity Data and Energy Institute Statistical Review of World Energy, processed by Our World in Data.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Electricity generation",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-worldwide-governance-indicators",
+      "path": "data/iraq-worldwide-governance-indicators.csv",
+      "title": "Iraq Worldwide Governance Indicators",
+      "description": "The World Bank's six governance estimates for Iraq — voice and accountability, political stability, government effectiveness, regulatory quality, rule of law, and control of corruption. Scores run from roughly −2.5 (weak) to +2.5 (strong).",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-worldwide-governance-indicators",
+      "unit": "score (−2.5 to +2.5)",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Governance"
+      ],
+      "sources": [
+        {
+          "title": "Worldwide Governance Indicators (WGI)",
+          "publisher": "World Bank",
+          "path": "https://www.worldbank.org/en/publication/worldwide-governance-indicators"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WGI estimates are composite perception-based indices; the World Bank advises treating small year-to-year changes with caution. World Bank data last updated 2026-03-18.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Voice & accountability",
+            "type": "number"
+          },
+          {
+            "name": "Political stability",
+            "type": "number"
+          },
+          {
+            "name": "Government effectiveness",
+            "type": "number"
+          },
+          {
+            "name": "Regulatory quality",
+            "type": "number"
+          },
+          {
+            "name": "Rule of law",
+            "type": "number"
+          },
+          {
+            "name": "Control of corruption",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-cereal-production-tonnes",
+      "path": "data/iraq-cereal-production-tonnes.csv",
+      "title": "Cereal Production",
+      "description": "Total production of cereals (wheat, barley, rice, maize and others) in Iraq. Year-to-year swings track water availability and irrigation restrictions more closely than planted area.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-cereal-production-tonnes",
+      "unit": "tonnes",
+      "frequency": "Annual",
+      "keywords": [
+        "Iraq",
+        "Water",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (AG.PRD.CREL.MT)",
+          "publisher": "World Bank",
+          "path": "https://api.worldbank.org/v2/country/IRQ/indicator/AG.PRD.CREL.MT"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "FAO data via WDI; series runs to 2023 and does not yet reflect the 2025–26 drought season, for which Enlil articles cite International Grains Council estimates.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Value",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-basic-water-and-sanitation-access",
+      "path": "data/iraq-basic-water-and-sanitation-access.csv",
+      "title": "Iraq access to basic drinking water and sanitation",
+      "description": "Share of the population using at least basic drinking-water services and at least basic sanitation services (WHO/UNICEF JMP).",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-basic-water-and-sanitation-access",
+      "unit": "% of population",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Water",
+        "Governance"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/SH.H2O.BASW.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI codes SH.H2O.BASW.ZS and SH.STA.BASS.ZS (WHO/UNICEF Joint Monitoring Programme). World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Basic drinking water",
+            "type": "number"
+          },
+          {
+            "name": "Basic sanitation",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-safely-managed-drinking-water-share",
+      "path": "data/iraq-safely-managed-drinking-water-share.csv",
+      "title": "Iraq access to safely managed drinking water",
+      "description": "Share of the population using drinking water free from contamination, available on premises and when needed — a stricter WHO/UNICEF standard than \"basic\" access. Companion to iraq-basic-water-and-sanitation-access: Iraq reports near-universal basic access, but a much lower share meets this safely-managed standard.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-safely-managed-drinking-water-share",
+      "unit": "% of population",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Water"
+      ],
+      "sources": [
+        {
+          "title": "WHO/UNICEF Joint Monitoring Programme, via World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/SH.H2O.SMDW.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "WDI code SH.H2O.SMDW.ZS (WHO/UNICEF JMP). World Bank data last updated 2026-07-13. Found while researching \"The Emergency Iraq Keeps Declaring\" (pollution/water-quality piece) — the basic-access series already on the Data Hub (iraq-basic-water-and-sanitation-access, ~98%) understates the quality problem; this stricter standard shows only ~60% as of 2024.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Safely managed drinking water",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-safely-managed-sanitation-share",
+      "path": "data/iraq-safely-managed-sanitation-share.csv",
+      "title": "Iraq access to safely managed sanitation",
+      "description": "Share of the population using sanitation facilities where excreta are safely disposed of in situ or treated off-site — a stricter WHO/UNICEF standard than \"basic\" access.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-safely-managed-sanitation-share",
+      "unit": "% of population",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Water"
+      ],
+      "sources": [
+        {
+          "title": "WHO/UNICEF Joint Monitoring Programme, via World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/SH.STA.SMSS.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "WDI code SH.STA.SMSS.ZS (WHO/UNICEF JMP). World Bank data last updated 2026-07-13. Directly relevant to \"The Emergency Iraq Keeps Declaring\": only about half of Iraqis have sanitation that is safely managed, consistent with the Ministry of Environment's own June 2026 admission that up to 70% of sewage in some provinces gets incomplete or no treatment.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Safely managed sanitation",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-agricultural-land-share",
+      "path": "data/iraq-agricultural-land-share.csv",
+      "title": "Iraq agricultural land (% of land area)",
+      "description": "Arable land, permanent crops and permanent pasture as a share of total land area.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-agricultural-land-share",
+      "unit": "% of land area",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Water",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/AG.LND.AGRI.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code AG.LND.AGRI.ZS. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Agricultural land",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-agricultural-water-withdrawals-share",
+      "path": "data/iraq-agricultural-water-withdrawals-share.csv",
+      "title": "Iraq agricultural share of freshwater withdrawals",
+      "description": "Share of total freshwater withdrawals used by agriculture (irrigation and livestock).",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-agricultural-water-withdrawals-share",
+      "unit": "% of total withdrawals",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Water"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/ER.H2O.FWAG.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code ER.H2O.FWAG.ZS. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Agriculture share",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-cereal-yield-kg-per-hectare",
+      "path": "data/iraq-cereal-yield-kg-per-hectare.csv",
+      "title": "Iraq Cereal Yield",
+      "description": "Average cereal yield across Iraq's wheat, rice, maize and barley production, in kilograms per hectare. A long-run proxy for how water availability and agricultural practice translate into actual farm output, distinct from total production (which also moves with planted area).",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-cereal-yield-kg-per-hectare",
+      "unit": "kg per hectare",
+      "frequency": "Annual",
+      "keywords": [
+        "Iraq",
+        "Water",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators — Iraq (AG.YLD.CREL.KG)",
+          "publisher": "World Bank",
+          "path": "https://api.worldbank.org/v2/country/IRQ/indicator/AG.YLD.CREL.KG"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "World Bank series currently runs through 2023 and does not yet reflect the 2025-26 drought season; the article's 2025-26 wheat figures use International Grains Council estimates cited in press reporting instead.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Yield (kg/ha)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-freshwater-withdrawals-share",
+      "path": "data/iraq-freshwater-withdrawals-share.csv",
+      "title": "Iraq freshwater withdrawals (% of internal resources)",
+      "description": "Annual freshwater withdrawals as a percentage of internal renewable water resources. Values above 100% mean Iraq draws more than its own renewable supply, relying on inflows from Turkey, Syria and Iran.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-freshwater-withdrawals-share",
+      "unit": "% of internal renewable resources",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Water"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/ER.H2O.FWTL.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code ER.H2O.FWTL.ZS (FAO AQUASTAT via WDI). World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Withdrawals",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-renewable-freshwater-per-capita",
+      "path": "data/iraq-renewable-freshwater-per-capita.csv",
+      "title": "Iraq renewable internal freshwater resources per capita",
+      "description": "Internal renewable freshwater resources (river flows and groundwater from rainfall within Iraq) divided by population — falling steadily as population grows.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-renewable-freshwater-per-capita",
+      "unit": "m³ per person",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Water",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/ER.H2O.INTR.PC?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code ER.H2O.INTR.PC. Excludes inflows from upstream countries. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Freshwater per capita",
+            "type": "number"
+          }
+        ]
+      }
+    }
+  ]
+}

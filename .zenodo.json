@@ -1,0 +1,29 @@
+{
+  "title": "Enlil Center Iraq Data Hub: climate, water, energy, economy and governance indicators for Iraq",
+  "upload_type": "dataset",
+  "description": "<p>Open mirror of the <a href=\"https://enlilcenter.org/data\">Enlil Center Iraq Data Hub</a>: 40 curated time series on Iraq's climate, water, energy, economy and governance, as CSV files with a Frictionless Data Package descriptor recording each series' original source, unit, retrieval date and scope notes.</p><p>Published by the Enlil Center for Environment and Sustainable Development, an independent research centre in Baghdad. Figures remain the work of their original publishers (mostly the World Bank and Ember, CC BY 4.0) and are shared under their terms; the compilation and metadata are CC BY 4.0.</p>",
+  "creators": [
+    {
+      "name": "Enlil Center for Environment and Sustainable Development"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Iraq",
+    "climate",
+    "water",
+    "energy",
+    "economy",
+    "governance",
+    "open data",
+    "Middle East"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://enlilcenter.org/data",
+      "relation": "isSupplementTo",
+      "resource_type": "dataset"
+    }
+  ],
+  "language": "eng"
+}

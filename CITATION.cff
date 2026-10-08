@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite the original source of each series and this collection."
+type: dataset
+title: "Enlil Center Iraq Data Hub"
+abstract: "Curated time series on Iraq's climate, water, energy, economy and governance, each with its original source, unit, retrieval date and scope notes. Open mirror of https://enlilcenter.org/data."
+authors:
+  - name: "Enlil Center for Environment and Sustainable Development"
+    website: "https://enlilcenter.org"
+    city: "Baghdad"
+    country: "IQ"
+url: "https://enlilcenter.org/data"
+license: CC-BY-4.0
+date-released: "2026-10-08"
+version: "2026.10.08"
+keywords:
+  - Iraq
+  - climate
+  - water
+  - energy
+  - economy
+  - governance
+  - open data
