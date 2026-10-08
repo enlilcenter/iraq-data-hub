@@ -9,6 +9,8 @@ authors:
     city: "Baghdad"
     country: "IQ"
 url: "https://enlilcenter.org/data"
+doi: "10.5281/zenodo.23240940"
+repository-code: "https://github.com/enlilcenter/iraq-data-hub"
 license: CC-BY-4.0
 date-released: "2026-10-08"
 version: "2026.10.08"

@@ -1,5 +1,7 @@
 # Enlil Center Iraq Data Hub
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23240940.svg)](https://doi.org/10.5281/zenodo.23240940)
+
 Open data on Iraq's climate, water, energy, economy and governance, published by the [Enlil Center for Environment and Sustainable Development](https://enlilcenter.org), an independent research centre in Baghdad.
 
 This repository mirrors the [Enlil Center Iraq Data Hub](https://enlilcenter.org/data). Each series has an interactive chart, its source and scope notes on its page there; here you get the same series as plain CSV files with a machine-readable [Frictionless Data Package](https://datapackage.org/) descriptor (`datapackage.json`).
@@ -76,7 +78,7 @@ pkg = Package("datapackage.json")
 
 The compilation, metadata and documentation are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The underlying figures remain the work of their original publishers and are shared under their terms, listed per series in `datapackage.json` (most are CC BY 4.0). Please cite both the original source and this collection:
 
-> Enlil Center for Environment and Sustainable Development (2026). *Enlil Center Iraq Data Hub*. https://enlilcenter.org/data
+> Enlil Center for Environment and Sustainable Development (2026). *Enlil Center Iraq Data Hub* [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23240940
 
 See `CITATION.cff` for a machine-readable citation.
 
