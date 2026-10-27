@@ -1,0 +1,5 @@
+Consumption band (kWh),Tariff (IQD/kWh)
+"1–1,500",10
+"1,501–3,000",35
+"3,001–4,000",80
+"4,001 and above",120

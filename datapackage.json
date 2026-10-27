@@ -3,7 +3,7 @@
   "title": "Enlil Center Iraq Data Hub: climate, water, energy, economy and governance indicators for Iraq",
   "description": "Open mirror of the Enlil Center Iraq Data Hub (https://enlilcenter.org/data): curated time series on Iraq's climate, water, energy, economy and governance, each with its original source, unit, retrieval date and scope notes.",
   "homepage": "https://enlilcenter.org/data",
-  "version": "2026.10.08",
+  "version": "2026.10.27",
   "created": "2026-10-08",
   "keywords": [
     "Iraq",
@@ -30,6 +30,98 @@
     }
   ],
   "resources": [
+    {
+      "name": "iraq-agriculture-value-added-gdp-share",
+      "path": "data/iraq-agriculture-value-added-gdp-share.csv",
+      "title": "Agriculture, Forestry and Fishing Value Added (% of GDP)",
+      "description": "Agriculture, forestry and fishing sector value added as a share of Iraq's GDP. Shows the sector is smaller and more volatile than commonly assumed — the 2020 spike reflects the collapse in oil GDP that year, not agricultural growth.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-agriculture-value-added-gdp-share",
+      "unit": "% of GDP",
+      "frequency": "Annual",
+      "keywords": [
+        "Iraq",
+        "Economy",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (NV.AGR.TOTL.ZS)",
+          "publisher": "World Bank",
+          "path": "https://api.worldbank.org/v2/country/IRQ/indicator/NV.AGR.TOTL.ZS"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "The 2020 spike is a denominator effect from the oil-price collapse, not sector growth.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Value",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-cip-sectoral-investment-needs-2030",
+      "path": "data/iraq-cip-sectoral-investment-needs-2030.csv",
+      "title": "Climate Investment Plan: Sectoral Investment Needs to 2030",
+      "description": "Investment required to 2030 and expected annual economic benefit by sector, as estimated in Iraq's Climate Investment Plan technical report (transitional phase 2025–2030). Total need: US$82.85 billion.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-cip-sectoral-investment-needs-2030",
+      "unit": "US$ billion",
+      "frequency": "One-off (2025 estimate)",
+      "keywords": [
+        "Iraq",
+        "Economy",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "Pathways for Climate Investment in Iraq — Technical Investment Report (2025), Table 1",
+          "publisher": "National Investment Commission / Ministry of Environment, with UNDP",
+          "path": "https://files.enlilcenter.org/research/pathways-for-climate-investment-in-iraq-1775146293856.pdf"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Compiled by Enlil Center from public sources; CC-BY-4.0 for the compilation",
+          "path": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "Authors' estimation from sector consultations, not audited project pipelines. Enlil Center was a contributing author to the report.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Sector",
+            "type": "string"
+          },
+          {
+            "name": "Investment required (US$ bn)",
+            "type": "number"
+          },
+          {
+            "name": "Expected annual benefit (US$ bn)",
+            "type": "number"
+          }
+        ]
+      }
+    },
     {
       "name": "iraq-climate-induced-displacement-iom",
       "path": "data/iraq-climate-induced-displacement-iom.csv",
@@ -75,6 +167,147 @@
       }
     },
     {
+      "name": "iraq-gas-flaring-intensity",
+      "path": "data/iraq-gas-flaring-intensity.csv",
+      "title": "Gas Flaring Intensity",
+      "description": "Cubic metres of gas flared per barrel of oil produced — a measure of how much of Iraq's associated gas is wasted relative to output, independent of production volume.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-gas-flaring-intensity",
+      "unit": "cubic metres per barrel",
+      "frequency": "Annual",
+      "keywords": [
+        "Iraq",
+        "Energy",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "Global Gas Flaring Tracker, June 2026 edition — flare volume and intensity estimates by economy, 2012–2025",
+          "publisher": "World Bank / Global Gas Flaring Reduction Partnership",
+          "path": "https://thedocs.worldbank.org/en/doc/b34e0c054bb3fe3695e70154c28eef3f-0400072026/related/Flare-volume-and-intensity-estimates-2012-2025.xlsx"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "June 2026 edition. Intensity has fallen since 2012 even as absolute volumes stayed high, because oil output grew faster than gas capture.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Flaring intensity (m3/bbl)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-gas-flaring-volume",
+      "path": "data/iraq-gas-flaring-volume.csv",
+      "title": "Gas Flaring Volume",
+      "description": "Estimated volume of associated gas flared at Iraq's oil fields each year, from satellite (VIIRS) observations compiled by the World Bank's Global Gas Flaring Reduction Partnership. Iraq is consistently among the three largest flaring countries in the world.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-gas-flaring-volume",
+      "unit": "billion cubic metres",
+      "frequency": "Annual",
+      "keywords": [
+        "Iraq",
+        "Energy",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "Global Gas Flaring Tracker, June 2026 edition — flare volume and intensity estimates by economy, 2012–2025",
+          "publisher": "World Bank / Global Gas Flaring Reduction Partnership",
+          "path": "https://thedocs.worldbank.org/en/doc/b34e0c054bb3fe3695e70154c28eef3f-0400072026/related/Flare-volume-and-intensity-estimates-2012-2025.xlsx"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "June 2026 edition. This edition re-estimates the entire 2012–2024 series at substantially higher volumes than the July 2025 edition, whose data file put 2024 at 18.2 bcm (and 2020 at 17.4 bcm); Enlil articles published before June 2026 cite the earlier edition's figures.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Flared gas (bcm)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-gas-flaring-by-oil-company-2023",
+      "path": "data/iraq-gas-flaring-by-oil-company-2023.csv",
+      "title": "Gas Utilised and Flared by National Oil Company, 2023 (official)",
+      "description": "Crude gas produced, utilised and flared by each of Iraq's federal national oil companies in 2023, as the companies declared it to the Iraq Extractive Industries Transparency Initiative. Together they flared 515,663 million standard cubic feet (about 14.6 billion cubic metres), 45.3% of the gas they produced. Missan (73%) and Dhi Qar (78%) flared most of their gas; North Oil flared 8%.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-gas-flaring-by-oil-company-2023",
+      "unit": "million standard cubic feet (mmscf) per year",
+      "frequency": "Annual (IEITI reporting year)",
+      "keywords": [
+        "Iraq",
+        "Energy",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "Iraq EITI Report 2023 (published 31 Dec 2025), Chapter 2, Table 20: crude gas utilization by company",
+          "publisher": "Iraq Extractive Industries Transparency Initiative (IEITI)",
+          "path": "https://eiti.org/documents/iraq-2023-eiti-report"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "other-at",
+          "title": "See the original publisher's terms of use",
+          "path": "https://eiti.org/documents/iraq-2023-eiti-report"
+        }
+      ],
+      "retrieved": "2026-10-10",
+      "notes": "Company-declared figures (Arabic report, Table 20). Flared gas is split by IEITI into 'recoverable' (flared for operational reasons, could be used with existing processing units) and gas flared because processing equipment is unavailable (80.5% of all flaring in 2023). Total gas includes associated, cap and free gas. Official volumes are well below the World Bank's satellite estimate for Iraq (24.3 bcm in 2023, see 'Gas Flaring Volume'), which also covers Kurdistan Region fields and international-operator fields not in this table. 1 mmscf = 28,316.8 m³. Data-quality note: Basra Oil Company's 2023 row is almost identical to its 2022 row (e.g. flared 352,135 vs 352,134 mmscf), which suggests carried-over reporting.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Company",
+            "type": "string"
+          },
+          {
+            "name": "Utilised (mmscf)",
+            "type": "number"
+          },
+          {
+            "name": "Flared, recoverable (mmscf)",
+            "type": "number"
+          },
+          {
+            "name": "Flared, no processing capacity (mmscf)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
       "name": "iraq-ghg-emissions-by-category-2021",
       "path": "data/iraq-ghg-emissions-by-category-2021.csv",
       "title": "Greenhouse-Gas Emissions by Source Category, 2021 (1st BTR)",
@@ -113,50 +346,6 @@
           },
           {
             "name": "Emissions (kt CO2e)",
-            "type": "number"
-          }
-        ]
-      }
-    },
-    {
-      "name": "iraq-average-precipitation",
-      "path": "data/iraq-average-precipitation.csv",
-      "title": "Iraq average precipitation",
-      "description": "Long-run average precipitation in depth over the country, in millimetres per year (FAO estimate as reported by WDI).",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "utf-8",
-      "homepage": "https://enlilcenter.org/data/iraq-average-precipitation",
-      "unit": "mm per year",
-      "frequency": "annual",
-      "keywords": [
-        "Iraq",
-        "Climate",
-        "Water"
-      ],
-      "sources": [
-        {
-          "title": "World Development Indicators (WDI)",
-          "publisher": "World Bank",
-          "path": "https://data.worldbank.org/indicator/AG.LND.PRCP.MM?locations=IQ"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC-BY-4.0",
-          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
-        }
-      ],
-      "retrieved": "2026-09-14",
-      "notes": "WDI code AG.LND.PRCP.MM. This is a long-term average, updated infrequently — it does not capture year-to-year drought. World Bank data last updated 2026-07-13.",
-      "schema": {
-        "fields": [
-          {
-            "name": "Year",
-            "type": "string"
-          },
-          {
-            "name": "Precipitation",
             "type": "number"
           }
         ]
@@ -245,6 +434,138 @@
           },
           {
             "name": "CO₂ per capita",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-cereal-yield-kg-per-hectare",
+      "path": "data/iraq-cereal-yield-kg-per-hectare.csv",
+      "title": "Iraq Cereal Yield",
+      "description": "Average cereal yield across Iraq's wheat, rice, maize and barley production, in kilograms per hectare. A long-run proxy for how water availability and agricultural practice translate into actual farm output, distinct from total production (which also moves with planted area).",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-cereal-yield-kg-per-hectare",
+      "unit": "kg per hectare",
+      "frequency": "Annual",
+      "keywords": [
+        "Iraq",
+        "Water",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators — Iraq (AG.YLD.CREL.KG)",
+          "publisher": "World Bank",
+          "path": "https://api.worldbank.org/v2/country/IRQ/indicator/AG.YLD.CREL.KG"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-10-27",
+      "notes": "World Bank series currently runs through 2023 and does not yet reflect the 2025-26 drought season; the article's 2025-26 wheat figures use International Grains Council estimates cited in press reporting instead.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Yield (kg/ha)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-agricultural-land-share",
+      "path": "data/iraq-agricultural-land-share.csv",
+      "title": "Iraq agricultural land (% of land area)",
+      "description": "Arable land, permanent crops and permanent pasture as a share of total land area.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-agricultural-land-share",
+      "unit": "% of land area",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Water",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/AG.LND.AGRI.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-10-27",
+      "notes": "WDI code AG.LND.AGRI.ZS. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Agricultural land",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-average-precipitation",
+      "path": "data/iraq-average-precipitation.csv",
+      "title": "Iraq average precipitation",
+      "description": "Long-run average precipitation in depth over the country, in millimetres per year (FAO estimate as reported by WDI).",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-average-precipitation",
+      "unit": "mm per year",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Climate",
+        "Water"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/AG.LND.PRCP.MM?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code AG.LND.PRCP.MM. This is a long-term average, updated infrequently — it does not capture year-to-year drought. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Precipitation",
             "type": "number"
           }
         ]
@@ -351,6 +672,138 @@
       }
     },
     {
+      "name": "iraq-renewable-electricity-output-share",
+      "path": "data/iraq-renewable-electricity-output-share.csv",
+      "title": "Iraq renewable electricity output (% of total electricity)",
+      "description": "Electricity generated from renewable sources (mainly hydropower) as a share of total electricity output.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-renewable-electricity-output-share",
+      "unit": "%",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Energy",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/EG.ELC.RNEW.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code EG.ELC.RNEW.ZS. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Renewable electricity",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-renewable-energy-consumption-share",
+      "path": "data/iraq-renewable-energy-consumption-share.csv",
+      "title": "Iraq renewable energy consumption (% of total final energy)",
+      "description": "Renewable energy as a share of total final energy consumption — Iraq remains one of the lowest in the region.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-renewable-energy-consumption-share",
+      "unit": "%",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Energy",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/EG.FEC.RNEW.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code EG.FEC.RNEW.ZS. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Renewable share",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-renewable-freshwater-per-capita",
+      "path": "data/iraq-renewable-freshwater-per-capita.csv",
+      "title": "Iraq renewable internal freshwater resources per capita",
+      "description": "Internal renewable freshwater resources (river flows and groundwater from rainfall within Iraq) divided by population — falling steadily as population grows.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-renewable-freshwater-per-capita",
+      "unit": "m³ per person",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Water",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/ER.H2O.INTR.PC?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-09-14",
+      "notes": "WDI code ER.H2O.INTR.PC. Excludes inflows from upstream countries. World Bank data last updated 2026-07-13.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Freshwater per capita",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
       "name": "iraq-pm25-mean-annual-exposure",
       "path": "data/iraq-pm25-mean-annual-exposure.csv",
       "title": "PM2.5 Air Pollution, Mean Annual Exposure",
@@ -395,26 +848,120 @@
       }
     },
     {
-      "name": "iraq-agriculture-value-added-gdp-share",
-      "path": "data/iraq-agriculture-value-added-gdp-share.csv",
-      "title": "Agriculture, Forestry and Fishing Value Added (% of GDP)",
-      "description": "Agriculture, forestry and fishing sector value added as a share of Iraq's GDP. Shows the sector is smaller and more volatile than commonly assumed — the 2020 spike reflects the collapse in oil GDP that year, not agricultural growth.",
+      "name": "iraq-gas-flared-share-official",
+      "path": "data/iraq-gas-flared-share-official.csv",
+      "title": "Share of Gas Flared by Federal Oil Companies (official)",
+      "description": "Share of the crude gas produced by Iraq's federal national oil companies that was flared rather than used, as declared to the Iraq Extractive Industries Transparency Initiative. It fell from 53.7% in 2018 to 45.3% in 2023: still close to half of all gas produced. Read it alongside the World Bank satellite series, which measures volume rather than share.",
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "utf-8",
-      "homepage": "https://enlilcenter.org/data/iraq-agriculture-value-added-gdp-share",
-      "unit": "% of GDP",
-      "frequency": "Annual",
+      "homepage": "https://enlilcenter.org/data/iraq-gas-flared-share-official",
+      "unit": "% of gas produced",
+      "frequency": "Annual (IEITI reporting year)",
       "keywords": [
         "Iraq",
-        "Economy",
+        "Energy",
         "Climate"
       ],
       "sources": [
         {
-          "title": "World Development Indicators (NV.AGR.TOTL.ZS)",
+          "title": "Iraq EITI reports 2017, 2018, 2019–2020, 2022 and 2023: crude gas produced, utilised and flared by federal oil companies",
+          "publisher": "Iraq Extractive Industries Transparency Initiative (IEITI)",
+          "path": "https://eiti.org/countries/iraq"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "other-at",
+          "title": "See the original publisher's terms of use",
+          "path": "https://eiti.org/countries/iraq"
+        }
+      ],
+      "retrieved": "2026-10-12",
+      "notes": "Company-declared figures covering federal national oil companies only (Basra, North, Missan, Dhi Qar, Midland). Sources by year: 2017, IEITI 2017 report Table 3-22 (558,518 of 1,054,864 mmscf flared); 2018, IEITI 2018 report p.15 (594,452 of 1,107,552 mmscf); 2019 and 2020, IEITI 2019–2020 report pp.17–20, published as daily rates (1,669 of 3,256 and 1,368 of 2,865 mmscf/day); 2022, IEITI 2022 report p.41 (511,346 of 1,099,605 mmscf); 2023, IEITI 2023 report Table 20 (515,663 of 1,139,419 mmscf, about 14.6 bcm). The 2021 report has no gas table; 2016 has company tables in mixed units but no national total; 2015 is excluded because its units are misprinted. Flared = all gas burnt (for operational reasons and for lack of processing capacity). Dhi Qar Oil appears as a separate company from 2018; earlier its fields sit within Basra. The share includes cap and free gas, which is mostly used, so the flared share of associated gas alone is higher. Data-quality note on 2022: the national totals reconcile, but the printed company rows for North, Missan and Dhi Qar do not (utilised + flared does not equal produced); the flared figures appear shifted by one row among those three companies, and read in their arithmetically consistent positions the 2022 company shares (North ~13%, Missan ~74%, Dhi Qar ~78%) match the 2023 pattern. Enlil therefore publishes company-level detail for 2023 only.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Flared (% of gas produced)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-solar-pv-yield-by-city",
+      "path": "data/iraq-solar-pv-yield-by-city.csv",
+      "title": "Solar PV Yield by City",
+      "description": "Expected annual output of 1 kW of solar panels at the optimal fixed tilt, kWh per year, from the EU's PVGIS service (SARAH3 satellite data, 14% system losses).",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-solar-pv-yield-by-city",
+      "unit": "kWh per kWp per year",
+      "frequency": "Long-term average",
+      "keywords": [
+        "Iraq",
+        "Energy",
+        "Climate"
+      ],
+      "sources": [
+        {
+          "title": "PVGIS 5.3 photovoltaic performance (SARAH3)",
+          "publisher": "European Commission Joint Research Centre",
+          "path": "https://re.jrc.ec.europa.eu/pvg_tools/en/"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "other-at",
+          "title": "See the original publisher's terms of use",
+          "path": "https://re.jrc.ec.europa.eu/pvg_tools/en/"
+        }
+      ],
+      "retrieved": "2026-10-27",
+      "notes": "PVGIS 5.3 PVcalc API with optimalangles=1 and loss=14. Does not include dust and soiling, which typically reduce output by several per cent in Iraq. The World Bank Global Solar Atlas gives slightly higher long-term values (Baghdad 1,694, Najaf 1,734).",
+      "schema": {
+        "fields": [
+          {
+            "name": "City",
+            "type": "string"
+          },
+          {
+            "name": "Annual yield (kWh/kWp)",
+            "type": "number"
+          },
+          {
+            "name": "Optimal tilt (degrees)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-cereal-production-tonnes",
+      "path": "data/iraq-cereal-production-tonnes.csv",
+      "title": "Cereal Production",
+      "description": "Total production of cereals (wheat, barley, rice, maize and others) in Iraq. Year-to-year swings track water availability and irrigation restrictions more closely than planted area.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-cereal-production-tonnes",
+      "unit": "tonnes",
+      "frequency": "Annual",
+      "keywords": [
+        "Iraq",
+        "Water",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (AG.PRD.CREL.MT)",
           "publisher": "World Bank",
-          "path": "https://api.worldbank.org/v2/country/IRQ/indicator/NV.AGR.TOTL.ZS"
+          "path": "https://api.worldbank.org/v2/country/IRQ/indicator/AG.PRD.CREL.MT"
         }
       ],
       "licenses": [
@@ -423,8 +970,8 @@
           "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
         }
       ],
-      "retrieved": "2026-09-24",
-      "notes": "The 2020 spike is a denominator effect from the oil-price collapse, not sector growth.",
+      "retrieved": "2026-10-27",
+      "notes": "FAO data via WDI; series runs to 2023 and does not yet reflect the 2025–26 drought season, for which Enlil articles cite International Grains Council estimates.",
       "schema": {
         "fields": [
           {
@@ -433,97 +980,6 @@
           },
           {
             "name": "Value",
-            "type": "number"
-          }
-        ]
-      }
-    },
-    {
-      "name": "iraq-cip-sectoral-investment-needs-2030",
-      "path": "data/iraq-cip-sectoral-investment-needs-2030.csv",
-      "title": "Climate Investment Plan: Sectoral Investment Needs to 2030",
-      "description": "Investment required to 2030 and expected annual economic benefit by sector, as estimated in Iraq's Climate Investment Plan technical report (transitional phase 2025–2030). Total need: US$82.85 billion.",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "utf-8",
-      "homepage": "https://enlilcenter.org/data/iraq-cip-sectoral-investment-needs-2030",
-      "unit": "US$ billion",
-      "frequency": "One-off (2025 estimate)",
-      "keywords": [
-        "Iraq",
-        "Economy",
-        "Climate"
-      ],
-      "sources": [
-        {
-          "title": "Pathways for Climate Investment in Iraq — Technical Investment Report (2025), Table 1",
-          "publisher": "National Investment Commission / Ministry of Environment, with UNDP",
-          "path": "https://files.enlilcenter.org/research/pathways-for-climate-investment-in-iraq-1775146293856.pdf"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "Compiled by Enlil Center from public sources; CC-BY-4.0 for the compilation",
-          "path": "https://creativecommons.org/licenses/by/4.0/"
-        }
-      ],
-      "retrieved": "2026-09-24",
-      "notes": "Authors' estimation from sector consultations, not audited project pipelines. Enlil Center was a contributing author to the report.",
-      "schema": {
-        "fields": [
-          {
-            "name": "Sector",
-            "type": "string"
-          },
-          {
-            "name": "Investment required (US$ bn)",
-            "type": "number"
-          },
-          {
-            "name": "Expected annual benefit (US$ bn)",
-            "type": "number"
-          }
-        ]
-      }
-    },
-    {
-      "name": "iraq-fdi-net-inflows-gdp-share",
-      "path": "data/iraq-fdi-net-inflows-gdp-share.csv",
-      "title": "Iraq foreign direct investment, net inflows (% of GDP)",
-      "description": "Net inflows of foreign direct investment as a share of GDP. Negative values mean more investment left Iraq than entered it that year.",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "utf-8",
-      "homepage": "https://enlilcenter.org/data/iraq-fdi-net-inflows-gdp-share",
-      "unit": "% of GDP",
-      "frequency": "annual",
-      "keywords": [
-        "Iraq",
-        "Economy"
-      ],
-      "sources": [
-        {
-          "title": "World Development Indicators (WDI)",
-          "publisher": "World Bank",
-          "path": "https://data.worldbank.org/indicator/BX.KLT.DINV.WD.GD.ZS?locations=IQ"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC-BY-4.0",
-          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
-        }
-      ],
-      "retrieved": "2026-09-24",
-      "notes": "WDI code BX.KLT.DINV.WD.GD.ZS. World Bank data last updated 2026-07-13. Net FDI has been negative every year from 2013 to 2024 with no exception; the last positive year was 2012.",
-      "schema": {
-        "fields": [
-          {
-            "name": "Year",
-            "type": "string"
-          },
-          {
-            "name": "Net FDI inflows",
             "type": "number"
           }
         ]
@@ -653,6 +1109,49 @@
           },
           {
             "name": "GDP per capita",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-fdi-net-inflows-gdp-share",
+      "path": "data/iraq-fdi-net-inflows-gdp-share.csv",
+      "title": "Iraq foreign direct investment, net inflows (% of GDP)",
+      "description": "Net inflows of foreign direct investment as a share of GDP. Negative values mean more investment left Iraq than entered it that year.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-fdi-net-inflows-gdp-share",
+      "unit": "% of GDP",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators (WDI)",
+          "publisher": "World Bank",
+          "path": "https://data.worldbank.org/indicator/BX.KLT.DINV.WD.GD.ZS?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+        }
+      ],
+      "retrieved": "2026-10-27",
+      "notes": "WDI code BX.KLT.DINV.WD.GD.ZS. World Bank data last updated 2026-07-13. Net FDI has been negative every year from 2013 to 2024 with no exception; the last positive year was 2012.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Net FDI inflows",
             "type": "number"
           }
         ]
@@ -833,6 +1332,50 @@
       }
     },
     {
+      "name": "iraq-southern-seaborne-crude-exports-2026-monthly",
+      "path": "data/iraq-southern-seaborne-crude-exports-2026-monthly.csv",
+      "title": "Iraq southern (seaborne) crude oil exports, monthly (2026)",
+      "description": "Iraq's southern, seaborne crude oil export volumes by month during the 2026 Iran-Israel-US war and Strait of Hormuz crisis. This covers the Basrah export route most directly exposed to the Hormuz closure; Iraq's separate northern Kirkuk-Ceyhan pipeline route continued operating and is not included here, so it understates Iraq's total national export volume in months when that pipeline was active.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-southern-seaborne-crude-exports-2026-monthly",
+      "unit": "Thousand barrels per day",
+      "frequency": "Monthly",
+      "keywords": [
+        "Iraq",
+        "Energy",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "Iraq southern crude export volumes, 2026",
+          "publisher": "SOMO / Iraq Ministry of Oil, as reported by AGBI and Reuters",
+          "path": "https://www.agbi.com/oil-and-gas/2026/09/iraq-says-its-oil-exports-are-close-to-pre-conflict-levels/"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Compiled by Enlil Center from public sources; CC-BY-4.0 for the compilation",
+          "path": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "March and April figures were dropped from this series after independent re-verification found conflicting monthly totals across sources that could not be reconciled with confidence; only May-August figures corroborated by ministry-cited (SOMO) reporting are included. This is southern/seaborne (Basrah) volume specifically, not Iraq's total national export volume - the northern Kirkuk-Ceyhan pipeline route continued operating separately and added several hundred thousand bpd on top of this series in most months (combined national average was roughly 530,000 bpd across May-June, against 100,000-500,000 bpd shown here for the seaborne route alone). Pre-war baseline (Jan-Feb 2026) reflects total exports since the routes were not yet differentiated in reporting.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Month",
+            "type": "string"
+          },
+          {
+            "name": "Southern/seaborne exports (thousand bpd)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
       "name": "iraq-total-natural-resource-rents-gdp-share",
       "path": "data/iraq-total-natural-resource-rents-gdp-share.csv",
       "title": "Iraq total natural resource rents (% of GDP)",
@@ -964,6 +1507,151 @@
       }
     },
     {
+      "name": "iraq-official-dinar-rate-tiers",
+      "path": "data/iraq-official-dinar-rate-tiers.csv",
+      "title": "Official Dinar Rate Tiers, Central Bank of Iraq",
+      "description": "The three official dinar-per-dollar rates the Central Bank of Iraq has set since it moved to a tiered structure in December 2020: the rate at which it buys dollars from the Ministry of Finance, the rate at which it sells to banks, and the rate for the public. The latest change, on 7 October 2026, set them at 1,500 / 1,510 / 1,520.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-official-dinar-rate-tiers",
+      "unit": "Iraqi dinars per US dollar",
+      "frequency": "Irregular (each official change)",
+      "keywords": [
+        "Iraq",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "Central Bank of Iraq exchange-rate notices: 19 Dec 2020 (news 1624), 7 Feb 2023 (news 2229), 7 Oct 2026 (news 3355)",
+          "publisher": "Central Bank of Iraq",
+          "path": "https://cbi.iq/news/view/3355"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "other-at",
+          "title": "See the original publisher's terms of use",
+          "path": "https://cbi.iq/news/view/3355"
+        }
+      ],
+      "retrieved": "2026-10-12",
+      "notes": "Tiers as worded by the CBI. Third tier: 'sale to the public' in 2020; 'banks and non-bank financial institutions to the final beneficiary' in 2023; 'cash dollars to the public' in 2026. The December 2020 notice is signed 19 Dec 2020 and states no effective date; the February 2023 rates applied from 8 Feb 2023; the October 2026 rates from 7 Oct 2026, under Council of Ministers Resolution 544 of 6 Oct 2026. Before December 2020 the CBI set a single auction price (1,166 from January 2012, 1,182 from December 2015) with small surcharges for transfers and cash, so earlier periods are not shown as tiers; see 'Official Exchange Rate' for the annual series. Notices: cbi.iq/news/print_news/1624, cbi.iq/news/view/2229, cbi.iq/news/view/3355. The parallel market rate is not covered.",
+      "schema": {
+        "fields": [
+          {
+            "name": "In force from",
+            "type": "string"
+          },
+          {
+            "name": "CBI buys from Ministry of Finance",
+            "type": "number"
+          },
+          {
+            "name": "CBI sells to banks",
+            "type": "number"
+          },
+          {
+            "name": "Sale to the public",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-official-exchange-rate",
+      "path": "data/iraq-official-exchange-rate.csv",
+      "title": "Official Exchange Rate, Dinars per US Dollar",
+      "description": "Iraq's official dinar-per-dollar rate from 2004 to today. It tracks the Central Bank of Iraq's base rate through the devaluation of December 2020 (to 1,450), the revaluation of February 2023 (to 1,300) and the devaluation of 7 October 2026 (to 1,500).",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-official-exchange-rate",
+      "unit": "Iraqi dinars per US dollar",
+      "frequency": "Annual",
+      "keywords": [
+        "Iraq",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "World Development Indicators, official exchange rate PA.NUS.FCRF (2004–2025 annual averages); Central Bank of Iraq notice of 7 Oct 2026 (2026 rate)",
+          "publisher": "World Bank; Central Bank of Iraq",
+          "path": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=IQ"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "other-at",
+          "title": "See the original publisher's terms of use",
+          "path": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=IQ"
+        }
+      ],
+      "retrieved": "2026-10-12",
+      "notes": "2004–2025: annual average of the official (CBI base) rate, World Bank WDI series PA.NUS.FCRF. 2026: the official base rate in force from 7 October 2026, set by Council of Ministers Resolution 544 and the Central Bank of Iraq notice of 7 Oct 2026 (cbi.iq/news/view/3355); it is the current rate, not an annual average (the base rate was 1,300 from 1 January to 6 October 2026). The series will be replaced by the World Bank 2026 annual average when published. Tiers in force: 1,500 / 1,510 / 1,520 (see 'Official Dinar Rate Tiers'). The parallel market rate, which has traded above the official rate at times (2022–2023, October 2026), is not covered. Series starts in 2004, after the new dinar replaced the old currencies.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "Official rate (IQD per USD)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-solar-panel-battery-imports-china",
+      "path": "data/iraq-solar-panel-battery-imports-china.csv",
+      "title": "Solar Panel and Battery Imports from China",
+      "description": "Value of China's exports to Iraq of photovoltaic modules (HS 854143) and lithium-ion batteries (HS 850760), as reported by China to UN Comtrade. China supplied 99.6% of Iraq's 2025 module imports.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-solar-panel-battery-imports-china",
+      "unit": "US$ million",
+      "frequency": "Annual",
+      "keywords": [
+        "Iraq",
+        "Energy",
+        "Economy"
+      ],
+      "sources": [
+        {
+          "title": "China exports to Iraq, HS 854143 (PV modules) and HS 850760 (lithium-ion batteries), 2022–2025",
+          "publisher": "UN Comtrade",
+          "path": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=156&partnerCode=368&cmdCode=854143&period=2025&flowCode=X"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "other-at",
+          "title": "See the original publisher's terms of use",
+          "path": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=156&partnerCode=368&cmdCode=854143&period=2025&flowCode=X"
+        }
+      ],
+      "retrieved": "2026-10-27",
+      "notes": "Mirror data: China as reporter, Iraq as partner, FOB values. Module code 854143 exists from 2022 (HS2022); earlier years used 854140, which also includes LEDs, so they are excluded. 2025 modules: 3,417,038 items, 101,494 t (about 29.7 kg each); at 550 W per module this is about 1.9 GW (Enlil estimate). Batteries include all uses, not only solar storage.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "PV modules (US$ m)",
+            "type": "number"
+          },
+          {
+            "name": "Lithium-ion batteries (US$ m)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
       "name": "iraq-electricity-transmission-distribution-losses",
       "path": "data/iraq-electricity-transmission-distribution-losses.csv",
       "title": "Electric Power Transmission and Distribution Losses (% of Output)",
@@ -991,7 +1679,7 @@
           "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
         }
       ],
-      "retrieved": "2026-09-24",
+      "retrieved": "2026-10-27",
       "notes": "Includes technical losses and non-technical losses (theft, unmetered use). Values above 50% in recent years reflect Iraq's degraded grid and widespread unbilled consumption.",
       "schema": {
         "fields": [
@@ -1007,88 +1695,48 @@
       }
     },
     {
-      "name": "iraq-gas-flaring-intensity",
-      "path": "data/iraq-gas-flaring-intensity.csv",
-      "title": "Gas Flaring Intensity",
-      "description": "Cubic metres of gas flared per barrel of oil produced — a measure of how much of Iraq's associated gas is wasted relative to output, independent of production volume.",
+      "name": "iraq-electricity-load-demanded-supplied-by-governorate-2025",
+      "path": "data/iraq-electricity-load-demanded-supplied-by-governorate-2025.csv",
+      "title": "Electricity Load Demanded vs Supplied by Governorate, 2025",
+      "description": "Average load demanded and average load supplied by governorate in 2025, megawatts, from the Ministry of Electricity.",
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "utf-8",
-      "homepage": "https://enlilcenter.org/data/iraq-gas-flaring-intensity",
-      "unit": "cubic metres per barrel",
+      "homepage": "https://enlilcenter.org/data/iraq-electricity-load-demanded-supplied-by-governorate-2025",
+      "unit": "MW",
       "frequency": "Annual",
       "keywords": [
         "Iraq",
-        "Energy",
-        "Climate"
+        "Energy"
       ],
       "sources": [
         {
-          "title": "Global Gas Flaring Tracker, June 2026 edition — flare volume and intensity estimates by economy, 2012–2025",
-          "publisher": "World Bank / Global Gas Flaring Reduction Partnership",
-          "path": "https://thedocs.worldbank.org/en/doc/b34e0c054bb3fe3695e70154c28eef3f-0400072026/related/Flare-volume-and-intensity-estimates-2012-2025.xlsx"
+          "title": "Annual Statistical Report 2025",
+          "publisher": "Ministry of Electricity of Iraq",
+          "path": "https://storage.moelc.gov.iq/2026/09/09/2026_09_09_12522686316_7636861263562432.pdf"
         }
       ],
       "licenses": [
         {
-          "name": "CC-BY-4.0",
-          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
+          "name": "other-at",
+          "title": "See the original publisher's terms of use",
+          "path": "https://storage.moelc.gov.iq/2026/09/09/2026_09_09_12522686316_7636861263562432.pdf"
         }
       ],
-      "retrieved": "2026-09-24",
-      "notes": "June 2026 edition. Intensity has fallen since 2012 even as absolute volumes stayed high, because oil output grew faster than gas capture.",
+      "retrieved": "2026-10-27",
+      "notes": "Read from the chart on p.35 of the Annual Statistical Report 2025. Nineveh (2,174 MW demanded) is omitted because its supplied value is truncated in the published chart. Federal governorates only; the Kurdistan Region is not included.",
       "schema": {
         "fields": [
           {
-            "name": "Year",
+            "name": "Governorate",
             "type": "string"
           },
           {
-            "name": "Flaring intensity (m3/bbl)",
+            "name": "Average load demanded (MW)",
             "type": "number"
-          }
-        ]
-      }
-    },
-    {
-      "name": "iraq-gas-flaring-volume",
-      "path": "data/iraq-gas-flaring-volume.csv",
-      "title": "Gas Flaring Volume",
-      "description": "Estimated volume of associated gas flared at Iraq's oil fields each year, from satellite (VIIRS) observations compiled by the World Bank's Global Gas Flaring Reduction Partnership. Iraq is consistently among the three largest flaring countries in the world.",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "utf-8",
-      "homepage": "https://enlilcenter.org/data/iraq-gas-flaring-volume",
-      "unit": "billion cubic metres",
-      "frequency": "Annual",
-      "keywords": [
-        "Iraq",
-        "Energy",
-        "Climate"
-      ],
-      "sources": [
-        {
-          "title": "Global Gas Flaring Tracker, June 2026 edition — flare volume and intensity estimates by economy, 2012–2025",
-          "publisher": "World Bank / Global Gas Flaring Reduction Partnership",
-          "path": "https://thedocs.worldbank.org/en/doc/b34e0c054bb3fe3695e70154c28eef3f-0400072026/related/Flare-volume-and-intensity-estimates-2012-2025.xlsx"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC-BY-4.0",
-          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
-        }
-      ],
-      "retrieved": "2026-09-24",
-      "notes": "June 2026 edition. This edition re-estimates the entire 2012–2024 series at substantially higher volumes than the July 2025 edition, whose data file put 2024 at 18.2 bcm (and 2020 at 17.4 bcm); Enlil articles published before June 2026 cite the earlier edition's figures.",
-      "schema": {
-        "fields": [
-          {
-            "name": "Year",
-            "type": "string"
           },
           {
-            "name": "Flared gas (bcm)",
+            "name": "Average load supplied (MW)",
             "type": "number"
           }
         ]
@@ -1165,7 +1813,7 @@
           "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
         }
       ],
-      "retrieved": "2026-09-14",
+      "retrieved": "2026-10-27",
       "notes": "WDI code EG.USE.PCAP.KG.OE. Series ends where WDI coverage ends. World Bank data last updated 2026-07-13.",
       "schema": {
         "fields": [
@@ -1175,138 +1823,6 @@
           },
           {
             "name": "Energy use per capita",
-            "type": "number"
-          }
-        ]
-      }
-    },
-    {
-      "name": "iraq-renewable-electricity-output-share",
-      "path": "data/iraq-renewable-electricity-output-share.csv",
-      "title": "Iraq renewable electricity output (% of total electricity)",
-      "description": "Electricity generated from renewable sources (mainly hydropower) as a share of total electricity output.",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "utf-8",
-      "homepage": "https://enlilcenter.org/data/iraq-renewable-electricity-output-share",
-      "unit": "%",
-      "frequency": "annual",
-      "keywords": [
-        "Iraq",
-        "Energy",
-        "Climate"
-      ],
-      "sources": [
-        {
-          "title": "World Development Indicators (WDI)",
-          "publisher": "World Bank",
-          "path": "https://data.worldbank.org/indicator/EG.ELC.RNEW.ZS?locations=IQ"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC-BY-4.0",
-          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
-        }
-      ],
-      "retrieved": "2026-09-14",
-      "notes": "WDI code EG.ELC.RNEW.ZS. World Bank data last updated 2026-07-13.",
-      "schema": {
-        "fields": [
-          {
-            "name": "Year",
-            "type": "string"
-          },
-          {
-            "name": "Renewable electricity",
-            "type": "number"
-          }
-        ]
-      }
-    },
-    {
-      "name": "iraq-renewable-energy-consumption-share",
-      "path": "data/iraq-renewable-energy-consumption-share.csv",
-      "title": "Iraq renewable energy consumption (% of total final energy)",
-      "description": "Renewable energy as a share of total final energy consumption — Iraq remains one of the lowest in the region.",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "utf-8",
-      "homepage": "https://enlilcenter.org/data/iraq-renewable-energy-consumption-share",
-      "unit": "%",
-      "frequency": "annual",
-      "keywords": [
-        "Iraq",
-        "Energy",
-        "Climate"
-      ],
-      "sources": [
-        {
-          "title": "World Development Indicators (WDI)",
-          "publisher": "World Bank",
-          "path": "https://data.worldbank.org/indicator/EG.FEC.RNEW.ZS?locations=IQ"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC-BY-4.0",
-          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
-        }
-      ],
-      "retrieved": "2026-09-14",
-      "notes": "WDI code EG.FEC.RNEW.ZS. World Bank data last updated 2026-07-13.",
-      "schema": {
-        "fields": [
-          {
-            "name": "Year",
-            "type": "string"
-          },
-          {
-            "name": "Renewable share",
-            "type": "number"
-          }
-        ]
-      }
-    },
-    {
-      "name": "iraq-southern-seaborne-crude-exports-2026-monthly",
-      "path": "data/iraq-southern-seaborne-crude-exports-2026-monthly.csv",
-      "title": "Iraq southern (seaborne) crude oil exports, monthly (2026)",
-      "description": "Iraq's southern, seaborne crude oil export volumes by month during the 2026 Iran-Israel-US war and Strait of Hormuz crisis. This covers the Basrah export route most directly exposed to the Hormuz closure; Iraq's separate northern Kirkuk-Ceyhan pipeline route continued operating and is not included here, so it understates Iraq's total national export volume in months when that pipeline was active.",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "utf-8",
-      "homepage": "https://enlilcenter.org/data/iraq-southern-seaborne-crude-exports-2026-monthly",
-      "unit": "Thousand barrels per day",
-      "frequency": "Monthly",
-      "keywords": [
-        "Iraq",
-        "Energy",
-        "Economy"
-      ],
-      "sources": [
-        {
-          "title": "Iraq southern crude export volumes, 2026",
-          "publisher": "SOMO / Iraq Ministry of Oil, as reported by AGBI and Reuters",
-          "path": "https://www.agbi.com/oil-and-gas/2026/09/iraq-says-its-oil-exports-are-close-to-pre-conflict-levels/"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "Compiled by Enlil Center from public sources; CC-BY-4.0 for the compilation",
-          "path": "https://creativecommons.org/licenses/by/4.0/"
-        }
-      ],
-      "retrieved": "2026-09-24",
-      "notes": "March and April figures were dropped from this series after independent re-verification found conflicting monthly totals across sources that could not be reconciled with confidence; only May-August figures corroborated by ministry-cited (SOMO) reporting are included. This is southern/seaborne (Basrah) volume specifically, not Iraq's total national export volume - the northern Kirkuk-Ceyhan pipeline route continued operating separately and added several hundred thousand bpd on top of this series in most months (combined national average was roughly 530,000 bpd across May-June, against 100,000-500,000 bpd shown here for the seaborne route alone). Pre-war baseline (Jan-Feb 2026) reflects total exports since the routes were not yet differentiated in reporting.",
-      "schema": {
-        "fields": [
-          {
-            "name": "Month",
-            "type": "string"
-          },
-          {
-            "name": "Southern/seaborne exports (thousand bpd)",
             "type": "number"
           }
         ]
@@ -1350,6 +1866,103 @@
           },
           {
             "name": "Electricity generation",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-residential-electricity-tariff-tiers",
+      "path": "data/iraq-residential-electricity-tariff-tiers.csv",
+      "title": "Residential Electricity Tariff Tiers",
+      "description": "Ministry of Electricity tariff in force for residential consumers, dinars per kWh by monthly consumption band.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-residential-electricity-tariff-tiers",
+      "unit": "IQD per kWh",
+      "frequency": "Current",
+      "keywords": [
+        "Iraq",
+        "Energy",
+        "Governance"
+      ],
+      "sources": [
+        {
+          "title": "Annual Statistical Report 2025",
+          "publisher": "Ministry of Electricity of Iraq",
+          "path": "https://storage.moelc.gov.iq/2026/09/09/2026_09_09_12522686316_7636861263562432.pdf"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "other-at",
+          "title": "See the original publisher's terms of use",
+          "path": "https://storage.moelc.gov.iq/2026/09/09/2026_09_09_12522686316_7636861263562432.pdf"
+        }
+      ],
+      "retrieved": "2026-10-27",
+      "notes": "From the 'tariff in force' table, Annual Statistical Report 2025, p.38. Commercial 60/80/120; industrial and agricultural 60; government 120. The Minister of Electricity put the cost of a kWh at 120 IQD (Nov 2024).",
+      "schema": {
+        "fields": [
+          {
+            "name": "Consumption band (kWh)",
+            "type": "string"
+          },
+          {
+            "name": "Tariff (IQD/kWh)",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "iraq-corruption-perceptions-index",
+      "path": "data/iraq-corruption-perceptions-index.csv",
+      "title": "Iraq Corruption Perceptions Index",
+      "description": "Transparency International's annual perceived-corruption score for Iraq's public sector, 0 (highly corrupt) to 100 (very clean), alongside its global rank.",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://enlilcenter.org/data/iraq-corruption-perceptions-index",
+      "unit": "score (0-100)",
+      "frequency": "annual",
+      "keywords": [
+        "Iraq",
+        "Governance"
+      ],
+      "sources": [
+        {
+          "title": "Corruption Perceptions Index",
+          "publisher": "Transparency International",
+          "path": "https://www.transparency.org/en/countries/iraq"
+        }
+      ],
+      "licenses": [
+        {
+          "name": "other-at",
+          "title": "See the original publisher's terms of use",
+          "path": "https://www.transparency.org/en/countries/iraq"
+        }
+      ],
+      "retrieved": "2026-09-24",
+      "notes": "Re-verified live 24 Sep 2026: the 2025 CPI (28/100, rank 136 of 182) had been published since the figure was first pulled on 22 Sep 2026 (26/100, rank 140 of 180) — the newer release is used here. Number of countries ranked changed 180->182 between releases, which affects rank comparability more than score comparability.",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "string"
+          },
+          {
+            "name": "CPI score",
+            "type": "number"
+          },
+          {
+            "name": "Rank",
+            "type": "number"
+          },
+          {
+            "name": "Countries ranked",
             "type": "number"
           }
         ]
@@ -1413,50 +2026,6 @@
           },
           {
             "name": "Control of corruption",
-            "type": "number"
-          }
-        ]
-      }
-    },
-    {
-      "name": "iraq-cereal-production-tonnes",
-      "path": "data/iraq-cereal-production-tonnes.csv",
-      "title": "Cereal Production",
-      "description": "Total production of cereals (wheat, barley, rice, maize and others) in Iraq. Year-to-year swings track water availability and irrigation restrictions more closely than planted area.",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "utf-8",
-      "homepage": "https://enlilcenter.org/data/iraq-cereal-production-tonnes",
-      "unit": "tonnes",
-      "frequency": "Annual",
-      "keywords": [
-        "Iraq",
-        "Water",
-        "Economy"
-      ],
-      "sources": [
-        {
-          "title": "World Development Indicators (AG.PRD.CREL.MT)",
-          "publisher": "World Bank",
-          "path": "https://api.worldbank.org/v2/country/IRQ/indicator/AG.PRD.CREL.MT"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC-BY-4.0",
-          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
-        }
-      ],
-      "retrieved": "2026-09-24",
-      "notes": "FAO data via WDI; series runs to 2023 and does not yet reflect the 2025–26 drought season, for which Enlil articles cite International Grains Council estimates.",
-      "schema": {
-        "fields": [
-          {
-            "name": "Year",
-            "type": "string"
-          },
-          {
-            "name": "Value",
             "type": "number"
           }
         ]
@@ -1597,50 +2166,6 @@
       }
     },
     {
-      "name": "iraq-agricultural-land-share",
-      "path": "data/iraq-agricultural-land-share.csv",
-      "title": "Iraq agricultural land (% of land area)",
-      "description": "Arable land, permanent crops and permanent pasture as a share of total land area.",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "utf-8",
-      "homepage": "https://enlilcenter.org/data/iraq-agricultural-land-share",
-      "unit": "% of land area",
-      "frequency": "annual",
-      "keywords": [
-        "Iraq",
-        "Water",
-        "Climate"
-      ],
-      "sources": [
-        {
-          "title": "World Development Indicators (WDI)",
-          "publisher": "World Bank",
-          "path": "https://data.worldbank.org/indicator/AG.LND.AGRI.ZS?locations=IQ"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC-BY-4.0",
-          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
-        }
-      ],
-      "retrieved": "2026-09-14",
-      "notes": "WDI code AG.LND.AGRI.ZS. World Bank data last updated 2026-07-13.",
-      "schema": {
-        "fields": [
-          {
-            "name": "Year",
-            "type": "string"
-          },
-          {
-            "name": "Agricultural land",
-            "type": "number"
-          }
-        ]
-      }
-    },
-    {
       "name": "iraq-agricultural-water-withdrawals-share",
       "path": "data/iraq-agricultural-water-withdrawals-share.csv",
       "title": "Iraq agricultural share of freshwater withdrawals",
@@ -1678,50 +2203,6 @@
           },
           {
             "name": "Agriculture share",
-            "type": "number"
-          }
-        ]
-      }
-    },
-    {
-      "name": "iraq-cereal-yield-kg-per-hectare",
-      "path": "data/iraq-cereal-yield-kg-per-hectare.csv",
-      "title": "Iraq Cereal Yield",
-      "description": "Average cereal yield across Iraq's wheat, rice, maize and barley production, in kilograms per hectare. A long-run proxy for how water availability and agricultural practice translate into actual farm output, distinct from total production (which also moves with planted area).",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "utf-8",
-      "homepage": "https://enlilcenter.org/data/iraq-cereal-yield-kg-per-hectare",
-      "unit": "kg per hectare",
-      "frequency": "Annual",
-      "keywords": [
-        "Iraq",
-        "Water",
-        "Climate"
-      ],
-      "sources": [
-        {
-          "title": "World Development Indicators — Iraq (AG.YLD.CREL.KG)",
-          "publisher": "World Bank",
-          "path": "https://api.worldbank.org/v2/country/IRQ/indicator/AG.YLD.CREL.KG"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC-BY-4.0",
-          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
-        }
-      ],
-      "retrieved": "2026-09-24",
-      "notes": "World Bank series currently runs through 2023 and does not yet reflect the 2025-26 drought season; the article's 2025-26 wheat figures use International Grains Council estimates cited in press reporting instead.",
-      "schema": {
-        "fields": [
-          {
-            "name": "Year",
-            "type": "string"
-          },
-          {
-            "name": "Yield (kg/ha)",
             "type": "number"
           }
         ]
@@ -1769,50 +2250,7 @@
           }
         ]
       }
-    },
-    {
-      "name": "iraq-renewable-freshwater-per-capita",
-      "path": "data/iraq-renewable-freshwater-per-capita.csv",
-      "title": "Iraq renewable internal freshwater resources per capita",
-      "description": "Internal renewable freshwater resources (river flows and groundwater from rainfall within Iraq) divided by population — falling steadily as population grows.",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "utf-8",
-      "homepage": "https://enlilcenter.org/data/iraq-renewable-freshwater-per-capita",
-      "unit": "m³ per person",
-      "frequency": "annual",
-      "keywords": [
-        "Iraq",
-        "Water",
-        "Climate"
-      ],
-      "sources": [
-        {
-          "title": "World Development Indicators (WDI)",
-          "publisher": "World Bank",
-          "path": "https://data.worldbank.org/indicator/ER.H2O.INTR.PC?locations=IQ"
-        }
-      ],
-      "licenses": [
-        {
-          "name": "CC-BY-4.0",
-          "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
-        }
-      ],
-      "retrieved": "2026-09-14",
-      "notes": "WDI code ER.H2O.INTR.PC. Excludes inflows from upstream countries. World Bank data last updated 2026-07-13.",
-      "schema": {
-        "fields": [
-          {
-            "name": "Year",
-            "type": "string"
-          },
-          {
-            "name": "Freshwater per capita",
-            "type": "number"
-          }
-        ]
-      }
     }
-  ]
+  ],
+  "updated": "2026-10-27"
 }
