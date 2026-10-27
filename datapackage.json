@@ -1996,8 +1996,8 @@
           "path": "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets"
         }
       ],
-      "retrieved": "2026-09-14",
-      "notes": "WGI estimates are composite perception-based indices; the World Bank advises treating small year-to-year changes with caution. World Bank data last updated 2026-03-18.",
+      "retrieved": "2026-10-27",
+      "notes": "WGI estimates are composite perception-based indices; the World Bank advises treating small year-to-year changes with caution. World Bank data last updated 2026-03-18. 2025 edition (retrieved 27 Oct 2026): the World Bank re-estimates every year of the series with each release, so earlier values differ slightly from previous editions.",
       "schema": {
         "fields": [
           {
